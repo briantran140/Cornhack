@@ -4,9 +4,7 @@ import Header from "./Components/header";
 
 export default async function Home() {
   return <>
-  <header>
     <Header/>
-  </header>
   </>
     
 }
