@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root{
+  --white: #FFFEF7;
+  --green: #9EC1AA;
+  --light-green: #C9E5D2;
+  --purple: #C89DD2;
+  --light-purple: #DAB6E1;
+  --black: #280B31;
+}
+
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
