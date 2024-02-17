@@ -1,55 +1,68 @@
 "use client"
 import React, { useEffect } from 'react';
-import { Chart } from 'react-google-charts';
 
 const ChartComponent: React.FC = () => {
   useEffect(() => {
-    // Check if the Google Charts library is already loaded
     if (!window.google) {
       const script = document.createElement('script');
       script.src = 'https://www.gstatic.com/charts/loader.js';
       script.async = true;
       script.onload = () => {
-        // Load the Google Charts library and callback function
         window.google.charts.load('current', { packages: ['corechart'] });
         window.google.charts.setOnLoadCallback(drawChart);
       };
 
-      // Append the script to the document
       document.head.appendChild(script);
     } else {
-      // If Google Charts library is already loaded, directly call the callback
       drawChart();
     }
   }, []);
 
   const drawChart = () => {
     const chartElement = document.getElementById('google-chart');
-  
-    // Check if the element exists
+    console.log('chartElement:', chartElement);
+
     if (chartElement) {
       const data = window.google.visualization.arrayToDataTable([
-        ['Task', 'Hours per Day'],
-        ['Work', 11],
-        ['Eat', 2],
-        ['Commute', 2],
-        ['Watch TV', 2],
-        ['Sleep', 7],
+        ['Measure', 'Percentage of Students', { role: "style" }],
+        ['Depression overall', 41, "color: #BE84C5" ],
+        ['Anxiety disorder', 34, "color: #BE84C5"],
+        ['Eating disorder', 12, "color: #BE84C5"],
+        ['Non-suicidal self-injury (past year)', 23, "color: #BE84C5"],
+        ['Suicidal ideation (past year)', 13, "color: #BE84C5"],
+        ['Mental health therapy/counseling (past year)', 30, "color: #BE84C5"],
       ]);
-  
+
+      const view = new window.google.visualization.DataView(data);
+      view.setColumns([
+        0,
+        1,
+        {
+          calc: (dt: any, row: any) => dt.getFormattedValue(row, 1) + '%', // Add '%' after the numbers
+          sourceColumn: 1,
+          type: 'string',
+          role: 'annotation',
+        },
+        2,
+      ]);
+
       const options = {
-        title: 'My Daily Activities',
+        title: 'Key Findings from Mental Health Survey',
+        bars: 'vertical',
+        bar: { groupWidth: '90%' },
+        chartArea: { width: '70%', height: '80%' },
+        legend: { position: "none" },
       };
-  
-      const chart = new window.google.visualization.PieChart(chartElement);
-  
-      chart.draw(data, options);
+
+      const chart = new window.google.visualization.BarChart(chartElement);
+      //@ts-ignore
+      chart.draw(view, options);
     } else {
       console.error("Element with id 'google-chart' not found.");
     }
   };
 
-  return <Chart chartType="PieChart" data={[['Task', 'Hours per Day'], ['Work', 11], ['Eat', 2], ['Commute', 2], ['Watch TV', 2], ['Sleep', 7]]} width="100%" height="400px" />;
+  return <div id="google-chart" style={{ width: '100%', height: '400px' }}></div>;
 };
 
 export default ChartComponent;
