@@ -8,6 +8,7 @@ const noto_serif = Noto_Serif({ subsets: ["latin"] });
 export default function Home() {
   return (
     <>
+      <div className="alt-spacer"></div>
       <div className="hero">
         <div className="overlay">
           <div className="spacer"></div>
@@ -18,8 +19,12 @@ export default function Home() {
             Only 30% of students actually reach out for help from a licensed
             therapist or counselor.
           </div>
+          <br/>
           <div className="big-text">END THE STIGMA</div>
           <div className="big-text">BEAT THE ODDS</div>
+          <br/>
+          <br/>
+          <div className="small-text">Source: https://healthymindsnetwork.org/wp-content/uploads/2022/01/HMS_nationalwinter2021_-update1.5.21.pdf</div>
         </div>
       </div>
       <div className="content">
