@@ -54,6 +54,10 @@ body {
   height: 12rem;
 }
 
+.jonah-spacer{
+  height:5rem;
+}
+
 .medium-text,
 .big-text {
   color: white;
