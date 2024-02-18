@@ -4,13 +4,11 @@ import { useEffect } from "react";
 import { useHealthContext } from "../context/healthContext";
 
 export default function Header() {
-  const { topics, myHealthFinder, itemList } = useHealthContext();
+  const { topics } = useHealthContext();
 
   useEffect(() => {
     console.log(topics);
-    console.log(myHealthFinder);
-    console.log(itemList);
-  }, [topics, myHealthFinder, itemList]);
+  }, [topics]);
 
   return (
     <header
@@ -26,10 +24,7 @@ export default function Header() {
         <a href="/about" className="link">
           About Us
         </a>
-        <a
-          href="/support"
-          className="btn"
-        >
+        <a href="/support" className="btn">
           Get Support
         </a>
       </div>

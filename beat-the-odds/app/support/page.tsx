@@ -74,7 +74,7 @@ const CollegeTile = ({ name, image, url }: ICollege) => {
 };
 
 export default function Support() {
-  const { topics } = useHealthContext();
+  const { topics, handleTopicId } = useHealthContext();
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
@@ -85,6 +85,7 @@ export default function Support() {
   const handleSelectChange = (e: {
     target: { value: React.SetStateAction<string> };
   }) => {
+    handleTopicId(e.target.value);
     setSelectedOption(e.target.value);
   };
 
