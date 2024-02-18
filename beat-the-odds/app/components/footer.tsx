@@ -10,7 +10,7 @@ const noto_serif = Noto_Serif({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <footer className={`bg-gray-800 text-black py-8 ${inter.className}`} style={{ backgroundColor: 'var(--green)' }}>
+    <footer className={`bg-gray-800 text-black py-8 ${inter.className}`} style={{ backgroundColor: 'var(--green)', color: 'var(--white)' }}>
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex mb-4">
           <Link legacyBehavior href="/">
