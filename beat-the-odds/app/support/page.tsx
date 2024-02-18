@@ -182,6 +182,7 @@ export default function Support() {
       >
         Get Support From Your College
       </h1>
+
       <div className="flex flex-wrap justify-center">
         {colleges.map((college) => (
           <CollegeTile

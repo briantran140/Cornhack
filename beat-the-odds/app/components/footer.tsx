@@ -14,13 +14,13 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex mb-4">
           <Link legacyBehavior href="/">
-            <a className="text-xl font-bold tracking-wide uppercase mr-6">Home</a>
+            <a className="text-xl font-bold tracking-wide uppercase mr-6 hover:underline">Home</a>
           </Link>
           <Link legacyBehavior href="/about">
-            <a className="text-xl font-bold tracking-wide uppercase mr-6">About Us</a>
+            <a className="text-xl font-bold tracking-wide uppercase mr-6 hover:underline">About Us</a>
           </Link>
           <Link legacyBehavior href="/resources">
-            <a className="text-xl font-bold tracking-wide uppercase mr-6">Resources</a>
+            <a className="text-xl font-bold tracking-wide uppercase hover:underline">Resources</a>
           </Link>
          
         </div>
