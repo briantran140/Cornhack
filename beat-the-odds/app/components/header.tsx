@@ -9,9 +9,9 @@ export default function Header() {
         <h1 className="text-3xl text-black">StudentSupportNet</h1>
       </div>
       <div className="flex">
-        <a href="/" className="mr-4 text-black px-4 py-2">Services</a>
-        <a href="/" className="border border-black text-black px-4 py-2 rounded hover:bg-green-700 focus:bg-green-700">
-          Get Started
+        <a href="/about" className="mr-4 text-black px-4 py-2">About Us</a>
+        <a href="/support" className="border border-black text-black px-4 py-2 rounded hover:bg-green-700 focus:bg-green-700 hover:underline;">
+          Get Support
         </a>
       </div>
 
