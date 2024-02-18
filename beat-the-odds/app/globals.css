@@ -26,24 +26,48 @@ body {
   color: var(--black);
 }
 
+
+.hero {
+  padding: 4rem 2rem 4rem 2rem;
+  background-color: var(--light-purple);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spacer {
+  height: 4.7rem;
+}
+
+.medium-text {
+  
+}
+
+.big-text {
+
+}
+
 .content {
-  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
   width: 90%;
 }
 
-.hero {
+.stat-box {
   display: flex;
   height: 400px;
   margin: 0 2rem 0 2rem;;
 }
 
 .chart {
+  display: block;
   width: 50%;
   padding-left: 2rem;
 }
 
 .blurb {
-  display: flex;
+  display: block;
   width: 50%;
   padding: 0 2rem 0 4rem;
   align-items: center;
@@ -51,13 +75,20 @@ body {
 }
 
 .mission {
+  display: block;
   padding: 0 4rem 0 4rem;
 }
 
 .head {
   font-weight: 600;
   font-size: 17pt;
+}
 
+.separator {
+  height: 1px;
+  margin: 2rem;
+  width: 100%;
+  background-color: #f5f3e2;
 }
 
 @layer utilities {
@@ -65,3 +96,18 @@ body {
     text-wrap: balance;
   }
 }
+
+@media only screen and (max-width: 1200px){
+  .stat-box {
+    flex-direction: column;
+  }
+  .chart {
+    width: 100%;
+  }
+  
+  .blurb {
+    width: 100%;
+  }
+  
+}
+
