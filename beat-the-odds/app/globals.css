@@ -9,25 +9,44 @@
   --purple: #C89DD2;
   --light-purple: #DAB6E1;
   --black: #280B31;
+
+  --primary-heading: 48pt;
+  --secondary-heading: 24pt;
+  --tertiary-heading: 18pt;
+  --text-size: 14pt;
 }
 
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
-
+/* ----- Global Components ----- */
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0rem;
+  padding: 0;
+  font-size: var(--text-size);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.content {
+  width: 90%;
+}
+
+.hero {
+  display: flex;
+  height: 400px;
+  margin: 0 2rem 0 2rem;;
+}
+
+.chart {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+.blurb {
+  display: flex;
+  width: 50%;
+  padding: 0 2rem 0 4rem;
+  align-items: center;
+  justify-content: center;
 }
 
 @layer utilities {
