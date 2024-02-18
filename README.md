@@ -114,7 +114,8 @@ The API endpoints used in this application are provided by the U.S. Department o
 - All three endpoints are being fetched in the application.
 - Due to time constraints, the data retrieved from `myhealthfinder.json` and `itemlist.json` endpoints are not currently displayed within the application. However, they are available for use and integration into future features.
 - For more detailed information about each endpoint and its usage, please refer to the [official documentation](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers) provided by the U.S. Department of Health and Human Services.
-
+---
+PASTE IT HERE
 ---
 
 ## Contributing
