@@ -4,7 +4,7 @@
 
 :root {
   --white: #fffef7;
-  --green: #9ec1aa;
+  --green: #143d23;
   --light-green: #c9e5d2;
   --purple: #c89dd2;
   --light-purple: #dab6e1;
@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/wildflowers-yellow-and-purple-black-brook-photography.jpg);
+    url(https://news.unl.edu/sites/default/files/styles/large_aspect/public/media/220929_Cupola_139_0.jpg?itok=eIiHqvL6);
   background-size: cover;
   background-position: center;
 }
@@ -54,16 +54,27 @@ body {
   height: 12rem;
 }
 .alt-spacer {
-  height: 5rem;
+  height: 3rem;
 }
 
 .jonah-spacer{
   height:5rem;
 }
 
-.medium-text,
+.small-text {
+  font-size: small;
+  color:  #eee9c0c1;
+}
+
+.medium-text {
+  font-size: var(--tertiary-heading);
+  font-style: italic;
+  color: var(--white);
+}
 .big-text {
-  color: white;
+  font-size: var(--secondary-heading);
+  font-weight: 600;
+  color: var(--white);
 }
 
 .content {
@@ -97,7 +108,7 @@ body {
 
 .mission {
   display: block;
-  padding: 0 4rem 0 4rem;
+  padding: 6rem 4rem;
 }
 
 .head {
@@ -173,4 +184,42 @@ body {
   font-size: 24pt;
   font-weight: 600;
   padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--secondary-heading);
+  color: var(--white);
+}
+
+.link {
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+.btn {
+  display: flex;
+  height: 50px;
+  padding: 0 .5rem 0 .5rem;
+  border-radius: 20%;
+  border: 2px solid var(--white);
+  color: var(--white);
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
