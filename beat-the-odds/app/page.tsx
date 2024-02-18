@@ -5,7 +5,6 @@ import { Inter, Noto_Serif } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 const noto_serif = Noto_Serif({ subsets: ["latin"] });
 
-
 export default function Home() {
   return (
     <>

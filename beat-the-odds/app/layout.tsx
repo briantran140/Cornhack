@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Noto_Serif } from "next/font/google";
 import Header from "./components/header";
 import Footer from "./components/footer";
-import './globals.css';
+import "./globals.css";
+import { HealthProvider } from "./context/healthContext";
 
 const inter = Inter({ subsets: ["latin"] });
 const noto_serif = Noto_Serif({ subsets: ["latin"] });
@@ -19,11 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${noto_serif.className}`}>
-        <Header />
-        {children}
-        <Footer />
+        <HealthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </HealthProvider>
       </body>
     </html>
   );
 }
-
