@@ -18,7 +18,7 @@ export default function Header() {
 
         <a
           href="/support"
-          className="border border-black text-black px-4 py-2 rounded hover:bg-green-700 focus:bg-green-700"
+          className="border border-black text-black px-4 py-2 rounded hover:bg-blue-200 focus:bg-blue-200"
         >
           Get Support
         </a>
