@@ -21,6 +21,6 @@
       "@/components/*": ["./components/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/support/dummyData.js"],
   "exclude": ["node_modules"]
 }
