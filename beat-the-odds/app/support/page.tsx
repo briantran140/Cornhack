@@ -180,7 +180,8 @@ export default function Support() {
 
   return (
     <>
-      <div className="jonah-spacer"></div>
+      <div className="alt-spacer"></div>
+      <div className="alt-spacer"></div>
       <h1
         className="text-6xl italic text-black"
         style={{ textAlign: "center" }}
