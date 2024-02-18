@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
         <h1 className="text-3xl font-bold text-center mb-6">Privacy Policy</h1>
         <div className="max-w-lg mx-auto">
           <p className="mb-4 text-center">
-            This Privacy Policy describes how Student Support Net ("we", "us", or "our") collects, uses, and shares personal information when you use our website.
+            This Privacy Policy describes how Student Support Net (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) collects, uses, and shares personal information when you use our website.
           </p>
           <div className="mb-4">
             <h2 className="text-xl font-semibold mb-2 text-center">Information We Collect</h2>

@@ -14,10 +14,10 @@ const TermsOfService = () => {
         <h1 className="page-header mb-4">Terms of Service</h1>
         <div className="terms-content text-left mb-8">
           <p className="mb-4">
-            Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Student Support Net's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
+            Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern Student Support Net&apos;s relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
           </p>
           <p className="mb-4">
-            The term 'Student Support Net' or 'us' or 'we' refers to the owner of the website whose registered office is 1313 S. 67th Avenue Omaha, NE 68182. The term 'you' refers to the user or viewer of our website.
+            The term &apos;Student Support Net&apos; or &apos;us&apos; or &apos;we&apos; refers to the owner of the website whose registered office is 1313 S. 67th Avenue Omaha, NE 68182. The term &apos;you&apos; refers to the user or viewer of our website.
           </p>
           <ul className="list-disc pl-6">
             <li className="mb-2">
