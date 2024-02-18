@@ -45,7 +45,6 @@ export function HealthProvider({ children }: PropsWithChildren) {
     const params: ITopicSearch = {
       categoryId: id,
     };
-    console.log(params.categoryId);
     setTopicParams(params);
   };
   useEffect(() => {

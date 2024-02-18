@@ -77,11 +77,6 @@ export default function Support() {
   const { topics, handleTopicId } = useHealthContext();
   const [selectedOption, setSelectedOption] = useState("");
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
-    console.log("Selected option:", selectedOption);
-  };
-
   const handleSelectChange = (e: {
     target: { value: React.SetStateAction<string> };
   }) => {
@@ -89,9 +84,6 @@ export default function Support() {
     setSelectedOption(e.target.value);
   };
 
-  useEffect(() => {
-    console.log(topics);
-  }, [topics]);
   return (
     <>
       <div className="jonah-spacer"></div>
@@ -107,7 +99,8 @@ export default function Support() {
       </div>
 
       <div className="mt-20 ml-10 mr-10">
-        <form onSubmit={handleSubmit} className="flex gap-2 mb-5">
+        <form className="flex gap-2 mb-5">
+          <h1>Category: </h1>
           <select
             name="title"
             value={selectedOption}
@@ -121,14 +114,6 @@ export default function Support() {
               </option>
             ))}
           </select>
-          <div className="flex gap-1 justify-end">
-            <button
-              type="submit"
-              className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none ml-5"
-            >
-              Submit
-            </button>
-          </div>
         </form>
         <ul className="mb-10">
           {topics.map((topic) => (
@@ -140,18 +125,6 @@ export default function Support() {
             />
           ))}
         </ul>
-
-        {/* <SupportElement
-          title="Support Title"
-          link="https://www.amazon.com/"
-          imageUrl="https:\/\/health.gov\/sites\/default\/files\/2023-03\/Teen-screen-depression_1194319414.jpg"
-        /> */}
-        {/* <SupportElement
-        key={index}
-        title={resources.title}
-        Link={resources.url}
-        imageUrl="https://example.com/image.jpg"
-      /> */}
       </div>
     </>
   );

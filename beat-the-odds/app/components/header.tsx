@@ -1,15 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useHealthContext } from "../context/healthContext";
-
 export default function Header() {
-  const { topics } = useHealthContext();
-
-  useEffect(() => {
-    console.log(topics);
-  }, [topics]);
-
   return (
     <header
       className="flex justify-between items-center mb-4 p-4 header fixed w-full top-0 z-50"
