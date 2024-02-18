@@ -12,9 +12,10 @@ import {
   fetchTopics,
 } from "../api/healthGovApi";
 import { ITopicSearch } from "../interfaces/ITopicSearch";
+import { ITopicResult } from "../interfaces/ITopicResult";
 
 export type HealthContextProps = {
-  topics: Array<any>;
+  topics: Array<ITopicResult>;
   myHealthFinder: Array<any>;
   itemList: Array<any>;
 };
@@ -26,7 +27,7 @@ const HealthContext = createContext<HealthContextProps>({
 });
 
 export function HealthProvider({ children }: PropsWithChildren) {
-  const [topics, setTopics] = useState<Array<any>>([]);
+  const [topics, setTopics] = useState<Array<ITopicResult>>([]);
   const [myHealthFinder, setMyHealthFinder] = useState<Array<any>>([]);
   const [itemList, setItemList] = useState<Array<any>>([]);
   const [topicParams, setTopicParams] = useState<ITopicSearch>({});
