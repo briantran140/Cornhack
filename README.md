@@ -30,7 +30,7 @@ In response to the escalating mental health crisis among college students, BeatT
 
 ## Technologies Used
 
-BeatTheOdds is built using a combination of modern technologies to provide a seamless and engaging experience for users.
+StudentSupportNet is built using a combination of modern technologies to provide a seamless and engaging experience for users.
 
 ### Frameworks and Libraries
 
