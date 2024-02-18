@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root{
-  --white: #FFFEF7;
-  --green: #9EC1AA;
-  --light-green: #C9E5D2;
-  --purple: #C89DD2;
-  --light-purple: #DAB6E1;
-  --black: #280B31;
+:root {
+  --white: #fffef7;
+  --green: #9ec1aa;
+  --light-green: #c9e5d2;
+  --purple: #c89dd2;
+  --light-purple: #dab6e1;
+  --black: #280b31;
 
   --primary-heading: 48pt;
   --secondary-heading: 24pt;
@@ -26,26 +26,37 @@ body {
   color: var(--black);
 }
 
-
 .hero {
-  padding: 4rem 2rem 4rem 2rem;
+  position: relative;
+  padding: 4rem 2rem;
+  height: 30rem;
   background-color: var(--light-purple);
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/wildflowers-yellow-and-purple-black-brook-photography.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .spacer {
-  height: 4.7rem;
+  height: 12rem;
 }
 
-.medium-text {
-  
-}
-
+.medium-text,
 .big-text {
-
+  color: white;
 }
 
 .content {
@@ -56,12 +67,13 @@ body {
 
 .stat-box {
   display: flex;
-  height: 400px;
-  margin: 0 2rem 0 2rem;;
+  margin: 0 2rem 0 2rem;
+  align-items: center;
 }
 
 .chart {
   display: block;
+  height: 400px;
   width: 50%;
   padding-left: 2rem;
 }
@@ -97,17 +109,15 @@ body {
   }
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1200px) {
   .stat-box {
     flex-direction: column;
   }
   .chart {
     width: 100%;
   }
-  
+
   .blurb {
     width: 100%;
   }
-  
 }
-

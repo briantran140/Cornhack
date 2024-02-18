@@ -5,16 +5,18 @@ export default function Home() {
   return (
     <>
       <div className="hero">
-        <div className="spacer"></div>
-        <div className="medium-text">
-          1 in 100 college students attempts to commit suicide.
+        <div className="overlay">
+          <div className="spacer"></div>
+          <div className="medium-text">
+            1 in 100 college students attempts to commit suicide.
+          </div>
+          <div className="medium-text">
+            Only 30% of students actually reach out for help from a licensed
+            therapist or counselor.
+          </div>
+          <div className="big-text">END THE STIGMA</div>
+          <div className="big-text">BEAT THE ODDS</div>
         </div>
-        <div className="medium-text">
-          Only 30% of students actually reaches out for help from a licensed
-          therapist or counselor.
-        </div>
-        <div className="big-text">END THE STIGMA</div>
-        <div className="big-text">BEAT THE ODDS</div>
       </div>
       <div className="content">
         <div className="separator"></div>
