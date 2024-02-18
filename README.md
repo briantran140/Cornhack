@@ -115,7 +115,23 @@ The API endpoints used in this application are provided by the U.S. Department o
 - Due to time constraints, the data retrieved from `myhealthfinder.json` and `itemlist.json` endpoints are not currently displayed within the application. However, they are available for use and integration into future features.
 - For more detailed information about each endpoint and its usage, please refer to the [official documentation](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers) provided by the U.S. Department of Health and Human Services.
 ---
-PASTE IT HERE
+## Scalability
+
+### Introduction
+The application is designed with scalability in mind, utilizing modern React practices and state management techniques to ensure ease of maintenance and future expansion.
+
+### State Management with `useContext`
+One key aspect contributing to scalability is the use of `useContext` from React. This provides a centralized state management solution, making it easy to access and update data across different components without the need for prop drilling.
+
+### Modular File Structure
+The application employs a modular file structure, organizing components, assets, and other resources into separate directories. This makes it easier to locate and modify specific parts of the application, enhancing maintainability as the project grows.
+
+### Component Reusability
+Components are designed to be reusable and composable, promoting code efficiency and reducing duplication. By encapsulating logic and UI elements into reusable components, developers can easily add new features or scale existing ones without starting from scratch.
+
+### Scalable Data Handling
+The application architecture supports scalable data handling, allowing for seamless integration with APIs, databases, or other data sources as the project evolves. Data fetching, processing, and storage are abstracted into separate modules, making it straightforward to adapt to changing data requirements.
+
 ---
 
 ## Contributing
