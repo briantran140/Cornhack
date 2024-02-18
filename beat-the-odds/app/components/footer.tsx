@@ -22,9 +22,7 @@ const Footer = () => {
           <Link legacyBehavior href="/resources">
             <a className="text-xl font-bold tracking-wide uppercase mr-6">Resources</a>
           </Link>
-          <Link legacyBehavior href="/contact">
-            <a className="text-xl font-bold tracking-wide uppercase">Contact</a>
-          </Link>
+         
         </div>
         <div className="flex mb-4">
           <Link legacyBehavior href="/privacy-policy">
