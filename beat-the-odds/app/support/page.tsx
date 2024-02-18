@@ -128,6 +128,7 @@ const Support = () => {
   return (
     <>
       <div className="jonah-spacer"></div>
+      <br></br>
       <h1 className="text-6xl italic text-black" style={{ textAlign: 'center' }}>Get Support From Your College</h1>
       <div className="flex flex-wrap justify-center">
         {colleges.map(college => (
