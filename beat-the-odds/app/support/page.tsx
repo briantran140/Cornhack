@@ -1,11 +1,12 @@
-import React from 'react';
+"use client"
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import UNO from '../images/UNOLogo.png';
 import UNL from '../images/UNLLogo.png';
 import UNK from '../images/UNKLogo.png';
 
 import SupportElement, { supportPage } from './supportElement'; // Assuming Support component is in the same directory
-import { dummyData } from './dummyData';
+import { useHealthContext } from '../context/healthContext';
 
 const colleges = [
   {
@@ -36,8 +37,49 @@ const CollegeTile = ({ name, image, url }) => {
   );
 };
 
+const options = 
+  [
+    { id: "531", title: "Get Screened" },
+    { id: "30533", title: "Get Enough Sleep" },
+    { id: "30537", title: "Get Your Cholesterol Checked" },
+    { id: "30538", title: "Choose the Right Birth Control" },
+    { id: "30539", title: "Eat Healthy" },
+    { id: "30540", title: "Get Your Well-Woman Visit Every Year" },
+    { id: "30541", title: "Men: Take Charge of Your Health" },
+    { id: "30546", title: "Take Steps to Prevent Type 2 Diabetes" },
+    { id: "30547", title: "Get Active" },
+    { id: "30558", title: "Drink Alcohol Only in Moderation" },
+    { id: "30560", title: "Manage Stress" },
+    { id: "30588", title: "Quitting Smoking: Conversation Starters" },
+    { id: "30604", title: "Depression: Conversation Starters" },
+    { id: "30606", title: "Alcohol Use: Conversation Starters" },
+    { id: "30610", title: "Quit Smoking" },
+    { id: "30614", title: "Testing for Syphilis: Questions for the Doctor" },
+    { id: "33303", title: "Talk with Your Doctor About Drug Misuse" },
+    { id: "33304", title: "Drug Misuse: Conversation Starters" },
+    { id: "34691", title: "Get Your Child Screened for Anxiety" },
+    { id: "34692", title: "Anxiety: Conversation Starters" }
+  ];
+
+
 export default function Support(){
-  //const resources: Array<supportPage> = dummyData.Resources.Resource;
+  const { topics, myHealthFinder, itemList } = useHealthContext();
+  const [selectedOption, setSelectedOption] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Selected option:", selectedOption);
+  };
+
+  const handleSelectChange = (e) => {
+    setSelectedOption(e.target.value);
+  };
+
+  useEffect(() => {
+    console.log(topics);
+    // console.log(myHealthFinder);
+    // console.log(itemList);
+  }, [topics, myHealthFinder, itemList]);
   return (
     <>
       <div className="jonah-spacer"></div>
@@ -48,17 +90,17 @@ export default function Support(){
       </div>
 
       <div className="mt-20">
-      <form className="flex gap-2 flex-col">
-        <input type="text" name="title" 
-        className="border border-slate-300 bg-transparent rounded px-2 py-1
-        outline-none focus-with:border-slate-100"/>
+        <form onSubmit={handleSubmit} className="flex gap-2 flex-col">
+          <select name="title" value={selectedOption} onChange={handleSelectChange} className="border border-slate-300 bg-transparent rounded px-2 py-1 outline-none focus-with:border-slate-100">
+            <option value="">Select...</option>
+            {options.map((option) => (
+              <option key={option.id} value={option.id}>{option.title}</option>
+            ))}
+          </select>
           <div className="flex gap-1 justify-end">
-            <button type="submit" 
-            className="border border-slate-300 text-slate-300 px-2 py-1 rounded 
-                      hover:bg-slate-700 focus-within:bg-slate-700 outline-none"
-            >Submit</button>
+            <button type="submit" className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none">Submit</button>
           </div>
-      </form>
+        </form>
       <SupportElement
         title="Support Title"
         link="https://www.amazon.com/"

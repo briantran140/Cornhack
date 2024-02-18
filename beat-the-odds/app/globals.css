@@ -4,7 +4,7 @@
 
 :root {
   --white: #fffef7;
-  --green: #9ec1aa;
+  --green: #143d23;
   --light-green: #c9e5d2;
   --purple: #c89dd2;
   --light-purple: #dab6e1;
@@ -45,7 +45,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/wildflowers-yellow-and-purple-black-brook-photography.jpg);
+    url(https://news.unl.edu/sites/default/files/styles/large_aspect/public/media/220929_Cupola_139_0.jpg?itok=eIiHqvL6);
   background-size: cover;
   background-position: center;
 }
@@ -53,22 +53,36 @@ body {
 .spacer {
   height: 12rem;
 }
+.alt-spacer {
+  height: 3rem;
+}
 
 .jonah-spacer{
   height:5rem;
 }
 
-.medium-text,
+.small-text {
+  font-size: small;
+  color:  #eee9c0c1;
+}
+
+.medium-text {
+  font-size: var(--tertiary-heading);
+  font-style: italic;
+  color: var(--white);
+}
 .big-text {
-  color: white;
+  font-size: var(--secondary-heading);
+  font-weight: 600;
+  color: var(--white);
 }
 
 .content {
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
 
 .stat-box {
@@ -94,7 +108,7 @@ body {
 
 .mission {
   display: block;
-  padding: 0 4rem 0 4rem;
+  padding: 6rem 4rem;
 }
 
 .head {
@@ -126,4 +140,86 @@ body {
   .blurb {
     width: 100%;
   }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width:60%;
+  margin-bottom: 20px;
+}
+
+.image {
+  width: 250px; /* Set your desired width for the member images */
+  height: 250px; /* Set your desired height for the member images */
+  border-radius: 3%; /* Make the images circular */
+  margin-bottom: 10px;
+
+}
+
+.name {
+  font-weight: bold;
+}
+
+.major {
+  color: #888; /* Adjust the color for the major */
+  font-style: italic;
+}
+
+.desc {
+  color: #888;
+  margin: 0 auto; /* Center the description */
+}
+
+.page-header {
+  text-align: center;
+  font-size: 24pt;
+  font-weight: 600;
+  padding: 1rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--secondary-heading);
+  color: var(--white);
+}
+
+.link {
+  color: var(--white);
+  padding: 1rem 2rem;
+}
+.link:hover{
+  text-decoration: underline;
+}
+
+.btn {
+  display: flex;
+  height: 50px;
+  padding: 0 .5rem 0 .5rem;
+  border-radius: 20%;
+  border: 2px solid var(--white);
+  color: var(--white);
+  align-items: center;
+}
+
+.btn:hover {
+  background-color: var(--light-green);
+  color: var(--green);
+
+}
+
+.link-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
