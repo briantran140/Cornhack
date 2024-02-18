@@ -199,9 +199,13 @@ export default function Support() {
           />
         ))}
       </div>
-      <div className="mt-20 ml-10 mr-10">
+      <div className="separator"></div>
+      <div>
+        <h1 className="head ml-5">Resources</h1>
+      </div>
+      <div className="mt-10 ml-10 mr-10">
         <form className="flex gap-2 mb-5">
-          <h1>Category: </h1>
+          <h1 className="flex mt-1">Category: </h1>
           <select
             name="title"
             value={selectedOption}
