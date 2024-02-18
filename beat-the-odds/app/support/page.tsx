@@ -165,12 +165,17 @@ const CollegeTile = ({ name, image, url }: ICollege) => {
 export default function Support() {
   const { topics, handleTopicId } = useHealthContext();
   const [selectedOption, setSelectedOption] = useState("");
+  const [showLoadingText, setShowLoadingText] = useState(false);
 
   const handleSelectChange = (e: {
     target: { value: React.SetStateAction<string> };
   }) => {
     handleTopicId(e.target.value);
+    setShowLoadingText(true);
     setSelectedOption(e.target.value);
+    setTimeout(() => {
+      setShowLoadingText(false); // Hide loading text after 1.5 second
+    }, 1500);
   };
 
   return (
@@ -210,6 +215,7 @@ export default function Support() {
             ))}
           </select>
         </form>
+        {showLoadingText && <p>Loading...</p>}
         <ul className="mb-10">
           {topics.map((topic) => (
             <SupportElement
