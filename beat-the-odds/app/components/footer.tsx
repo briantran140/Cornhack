@@ -19,7 +19,7 @@ const Footer = () => {
           <Link legacyBehavior href="/about">
             <a className="text-xl font-bold tracking-wide uppercase mr-6 hover:underline">About Us</a>
           </Link>
-          <Link legacyBehavior href="/resources">
+          <Link legacyBehavior href="/support">
             <a className="text-xl font-bold tracking-wide uppercase hover:underline">Resources</a>
           </Link>
          

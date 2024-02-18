@@ -189,7 +189,7 @@ export default function Support() {
     setSelectedOption(e.target.value);
     setTimeout(() => {
       setShowLoadingText(false); // Hide loading text after 1.5 second
-    }, 1500);
+    }, 2000);
   };
 
   return (
@@ -225,7 +225,7 @@ export default function Support() {
       <div>
         <h1 className="head ml-5">Resources</h1>
       </div>
-      <div className="mt-10 ml-10 mr-10">
+      <div className="mt-20 ml-10 mr-10">
         <form className="flex gap-2 mb-5">
           <h1 className="flex mt-1">Category: </h1>
           <select
