@@ -1,6 +1,6 @@
 # UNL Cornhacks - BeatTheOdds
 
-In the past few years, there has been a very prevalent mental health crisis in our communities. With anxiety and depression rates in college student rising at an alarming rate, it is becoming more and more important to have mental health outlets and resources readily available. We took it upon ourselves to develop a web application that serves as a pipeline to connect college students to their college's counseling and psychological services. End the stigma surrounding mental health. Get the support you deserve. *Beat the odds.*
+In the past few years, there has been a very prevalent mental health crisis in our communities. With anxiety and depression rates in college student rising at an alarming rate, it is becoming more and more important to have mental health outlets and resources readily available. We took it upon ourselves to develop a web application that serves as a pipeline to connect college students to their college's counseling and psychological services. Without seeking support, the odds are stacked against you. End the stigma surrounding mental health. *Beat the odds.*
 
 ## Table of Contents
 
@@ -17,11 +17,27 @@ Provide a brief overview of the project, its purpose, and any key objectives.
 
 ## Features
 
-Highlight key features or functionalities of your project.
+- **Connection to Counseling Services:** Seamlessly connect college students to their college's counseling and psychological services.
+- **Mental Health Resources:** Provide a centralized hub for mental health resources, information, and support.
+- **User-Friendly Interface:** An intuitive and user-friendly web application designed to ensure a positive user experience.
 
 ## Getting Started
 
-Include instructions on how to set up and run the project locally. Include any prerequisites, installation steps, or configuration needed.
+To run this project locally, follow these steps:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/BeatTheOdds.git
+2. **Naviget to the Project Directory:**
+    ```bash
+    cd BeatTheOdds
+3. **Install Dependencies:**
+    ```bash
+    npm install
+4. **Run the Application:**
+    ```bash
+    npm run dev
+By default, this application should be running on `http://localhost:3000`
 
 ## Usage
 
@@ -29,12 +45,17 @@ Provide examples or code snippets demonstrating how to use your project. Include
 
 ## Contributing
 
-Explain how others can contribute to your project. Include guidelines for code contributions, bug reporting, and feature requests.
+We welcome contributions from the community. If you'd like to contribute to the project, please follow these guidelines:
+
+- Fork the repository.
+- Create a new branch for your feature or bug fix.
+- Make your changes and submit a pull request.
+- For bug reports, feature requests, or general questions, please open an issue.
 
 ## License
 
-Specify the license under which your project is distributed.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+MIT License
 
-**Note:** Include badges, such as build status or license badges, at the top of your README to provide quick information about the project's status.
+[Full license text](LICENSE)
