@@ -105,8 +105,8 @@ export default function Support() {
         ))}
       </div>
 
-      <div className="mt-20">
-        <form onSubmit={handleSubmit} className="flex gap-2 flex-col">
+      <div className="mt-20 ml-10 mr-10">
+        <form onSubmit={handleSubmit} className="flex gap-2 mb-5">
           <select
             name="title"
             value={selectedOption}
@@ -123,20 +123,23 @@ export default function Support() {
           <div className="flex gap-1 justify-end">
             <button
               type="submit"
-              className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none"
+              className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none ml-5"
             >
               Submit
             </button>
           </div>
         </form>
-        {topics.map((topic) => (
-          <SupportElement
-            key={topic.Id}
-            title={topic.Title}
-            link={topic.AccessibleVersion}
-            imageUrl={topic.ImageUrl}
-          />
-        ))}
+        <ul className="mb-10">
+          {topics.map((topic) => (
+            <SupportElement
+              key={topic.Id}
+              title={topic.Title}
+              link={topic.AccessibleVersion}
+              imageUrl={topic.ImageUrl}
+            />
+          ))}
+        </ul>
+
         {/* <SupportElement
           title="Support Title"
           link="https://www.amazon.com/"
