@@ -34,7 +34,7 @@ BeatTheOdds is built using a combination of modern technologies to provide a sea
 
 ### Frameworks and Libraries
 
-- **Next.js:** BeatTheOdds is built on Next.js, a powerful React framework that enables server-side rendering, efficient routing, and simplified development.
+- **Next.js:** StudentSupportNet is built on Next.js, a powerful React framework that enables server-side rendering, efficient routing, and simplified development.
 
 - **Framer Motion:** We utilize Framer Motion for smooth and interactive animations, creating an engaging user interface.
 
