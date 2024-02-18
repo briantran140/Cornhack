@@ -26,7 +26,7 @@ export default function Home() {
       <div className="content">
         <div className="separator"></div>
         <div className="stat-box">
-          <div className="blurb">
+          <div className={`blurb ${inter.className}`}>
             Mental health holds paramount significance, particularly among
             college students, as it profoundly influences overall well-being and
             academic success. The provided data, revealing high prevalence rates
@@ -45,12 +45,6 @@ export default function Home() {
           </div>
           <div className="chart">
             <Chart />
-          </div>
-          <div className={`blurb ${inter.className}`}>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
-            libero esse nam et quibusdam, enim nobis ullam earum officiis?
-            Tenetur, repudiandae dolorum repellendus accusantium animi dolorem
-            nihil facere eligendi sint.
           </div>
         </div>
         <div className="separator"></div>
