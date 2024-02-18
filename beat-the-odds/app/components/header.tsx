@@ -21,6 +21,7 @@ export default function Header() {
         <img src="/favicon.ico" alt="Favicon" className="h-11 mr-2" />
         <h1 className="logo-name">StudentSupportNet</h1>
       </a>
+
       <div className="link-container">
         <a href="/about" className="link">
           About Us
