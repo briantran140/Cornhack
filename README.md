@@ -8,6 +8,7 @@ In the past few years, there has been a very prevalent mental health crisis in o
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
+- [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -39,9 +40,59 @@ To run this project locally, follow these steps:
     npm run dev
 By default, this application should be running on `http://localhost:3000`
 
-## Usage
+---
+## API
+### Developer
+The API endpoints used in this application are provided by the U.S. Department of Health and Human Services.
 
-Provide examples or code snippets demonstrating how to use your project. Include screenshots or gifs if applicable.
+- **Link:** [U.S. Department of Health and Human Services APIs](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers)
+- **Base URL:** `https://health.gov/myhealthfinder/api/v3`
+
+### Endpoints:
+
+### Topic Search
+- **Endpoint:** `topicsearch.json`
+- **Description:** Retrieves information about a particular health topic.
+- **Query Parameters:**
+  - `lang`: Language of the content (en or es)
+  - `topicId`: ID of the topic
+  - `categoryId`: ID of the category
+  - `keyword`: Keyword to search within topics
+- **Usage Example:**
+  ```bash
+  GET /topicsearch.json?lang=en&topicId=123&keyword=diabetes
+
+### MyHealthFinder
+- **Endpoint:** `myhealthfinder.json`
+- **Description:** Retrieves a list of resources suitable for a person based on their demographics and health status.
+- **Query Parameters:**
+  - `lang`: Language of the content (en or es)
+  - `age`: Age of the person
+  - `sex`: Sex of the person
+  - `tobaccoUse`: Whether the person uses tobacco (0 or 1)
+  - `sexuallyActive`: Whether the person is sexually active (0 or 1)
+  - `pregnant`: Whether the person is pregnant (0 or 1)
+  - `category`: Category of health resources
+- **Usage Example:**
+  ```bash
+  GET /myhealthfinder.json?lang=en&age=30&sex=male&tobaccoUse=0&sexuallyActive=1&category=diet
+
+### Item List
+- **Endpoint:** `itemlist.json`
+- **Description:** Retrieves a list of all health topics.
+- **Query Parameters:**
+  - `lang`: Language of the content (en or es)
+  - `type`: Type of topics
+- **Usage Example:**
+  ```bash
+  GET /itemlist.json?lang=en&type=all
+
+### Implementation Notes
+- All three endpoints are implemented in the application.
+- Due to time constraints, the data retrieved from `myhealthfinder.json` and `itemlist.json` endpoints are not currently displayed within the application. However, they are available for use and integration into future features.
+- For more detailed information about each endpoint and its usage, please refer to the [official documentation](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers) provided by the U.S. Department of Health and Human Services.
+
+---
 
 ## Contributing
 

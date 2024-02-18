@@ -1,10 +1,12 @@
-import React from "react";
+"use client";
+import './styles.css';
+
+import React, { useState } from "react";
 import Image from "next/image";
 import anon from "../images/missing-photo.png";
-import { Inter, Noto_Serif } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-const noto_serif = Noto_Serif({ subsets: ["latin"] });
 
 const members = [
   {
@@ -23,7 +25,7 @@ const members = [
     image: anon,
     name: "Anonymous",
     major: "Computer Science",
-    desc: "",
+    desc: "As a college student grappling with anxiety, feeling low, and battling my own thoughts, I've come to realize the vital importance of reaching out for support. It's not always easy, but I've learned firsthand how crucial it is to talk about mental health struggles and ask for help when needed. Despite the busyness of college life and the difficulty in trusting others, I've discovered the immense value in leaning on my family and seeking guidance from professionals who truly understand what I'm going through. While hitting the gym or going for a ride on my motorcycle provides temporary relief, I've learned that addressing my problems head-on is essential for long-term well-being. Despite having a small social circle, I'm committed to prioritizing self-care and actively seeking support when life feels overwhelming.",
   },
   {
     image: anon,
@@ -34,6 +36,16 @@ const members = [
 ];
 
 const About = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToNextMember = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === members.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const goToPrevMember = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? members.length - 1 : prevIndex - 1));
+  };
+
   return (
     <>
       <div className="jonah-spacer"></div>
@@ -41,20 +53,18 @@ const About = () => {
       <div className="content">
         <div className="container">
           <div className="team">
-            {members.map((member, index) => (
-              <div key={index} className="member">
-                <Image
-                  className="image"
-                  src={member.image}
-                  alt="anonymous"
-                ></Image>
-                <div className="name">{member.name}</div>
-                <div className="major">{member.major}</div>
-                <div className={`desc ${inter.className}`}>{member.desc}</div>
-                <div className="alt-spacer"></div>
-                
-              </div>
-            ))}
+            <div key={currentIndex} className="member">
+              <Image
+                className="image"
+                src={members[currentIndex].image}
+                alt="anonymous"
+              ></Image>
+              <div className="name">{members[currentIndex].name}</div>
+              <div className="major">{members[currentIndex].major}</div>
+              <div className={`desc ${inter.className}`}>{members[currentIndex].desc}</div>
+            </div>
+            <button className="prev-btn" onClick={goToPrevMember}><span>&#8592;</span></button>
+            <button className="next-btn" onClick={goToNextMember}><span>&#8594;</span></button>
           </div>
         </div>
       </div>
