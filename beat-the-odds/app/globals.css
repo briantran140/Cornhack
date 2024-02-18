@@ -27,6 +27,7 @@ body {
 }
 
 .content {
+  padding-top: 6rem;
   width: 90%;
 }
 
@@ -47,6 +48,16 @@ body {
   padding: 0 2rem 0 4rem;
   align-items: center;
   justify-content: center;
+}
+
+.mission {
+  padding: 0 4rem 0 4rem;
+}
+
+.head {
+  font-weight: 600;
+  font-size: 17pt;
+
 }
 
 @layer utilities {
