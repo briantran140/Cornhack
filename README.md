@@ -58,9 +58,6 @@ The API endpoints used in this application are provided by the U.S. Department o
   - `topicId`: ID of the topic
   - `categoryId`: ID of the category
   - `keyword`: Keyword to search within topics
-- **Usage Example:**
-  ```bash
-  GET /topicsearch.json?lang=en&topicId=123&keyword=diabetes
 
 ### MyHealthFinder
 - **Endpoint:** `myhealthfinder.json`
@@ -73,9 +70,6 @@ The API endpoints used in this application are provided by the U.S. Department o
   - `sexuallyActive`: Whether the person is sexually active (0 or 1)
   - `pregnant`: Whether the person is pregnant (0 or 1)
   - `category`: Category of health resources
-- **Usage Example:**
-  ```bash
-  GET /myhealthfinder.json?lang=en&age=30&sex=male&tobaccoUse=0&sexuallyActive=1&category=diet
 
 ### Item List
 - **Endpoint:** `itemlist.json`
@@ -83,12 +77,9 @@ The API endpoints used in this application are provided by the U.S. Department o
 - **Query Parameters:**
   - `lang`: Language of the content (en or es)
   - `type`: Type of topics
-- **Usage Example:**
-  ```bash
-  GET /itemlist.json?lang=en&type=all
 
 ### Implementation Notes
-- All three endpoints are implemented in the application.
+- All three endpoints are being fetched in the application.
 - Due to time constraints, the data retrieved from `myhealthfinder.json` and `itemlist.json` endpoints are not currently displayed within the application. However, they are available for use and integration into future features.
 - For more detailed information about each endpoint and its usage, please refer to the [official documentation](https://health.gov/our-work/national-health-initiatives/health-literacy/consumer-health-content/free-web-content/apis-developers) provided by the U.S. Department of Health and Human Services.
 

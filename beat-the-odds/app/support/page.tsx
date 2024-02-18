@@ -22,6 +22,8 @@ import SaintMary from "../images/SaintMary.png";
 import Methodist from "../images/Methodist.png";
 import Concordia from "../images/York.png";
 
+import { motion } from "framer-motion";
+
 import SupportElement from "./supportElement"; // Assuming Support component is in the same directory
 import { useHealthContext } from "../context/healthContext";
 
@@ -123,6 +125,18 @@ const colleges = [
   },
 ];
 
+const slideIn = {
+  initial: { opacity: 0, x: -50, },
+  animate: ( index : number ) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: .1 * index,
+      duration: .5,
+    }
+  }),
+}
+
 const CollegeTile = ({ name, image, url }: ICollege) => {
   return (
     <a
@@ -190,13 +204,21 @@ export default function Support() {
       </h1>
 
       <div className="flex flex-wrap justify-center">
-        {colleges.map((college) => (
+        {colleges.map((college, index) => (
+          <motion.div 
+            key={index}
+            initial="initial"
+                whileInView="animate"
+                viewport={{once:true}}
+                custom={index}
+                variants={slideIn}
+          >
           <CollegeTile
             key={college.name}
             name={college.name}
             image={college.image}
             url={college.url}
-          />
+          /></motion.div>
         ))}
       </div>
       <div className="separator"></div>
