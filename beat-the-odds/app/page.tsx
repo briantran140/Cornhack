@@ -1,5 +1,9 @@
 "use client";
 import Chart from "./components/chart";
+import { Inter, Noto_Serif } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+const noto_serif = Noto_Serif({ subsets: ["latin"] });
 
 
 export default function Home() {
@@ -41,6 +45,12 @@ export default function Home() {
           </div>
           <div className="chart">
             <Chart />
+          </div>
+          <div className={`blurb ${inter.className}`}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet
+            libero esse nam et quibusdam, enim nobis ullam earum officiis?
+            Tenetur, repudiandae dolorum repellendus accusantium animi dolorem
+            nihil facere eligendi sint.
           </div>
         </div>
         <div className="separator"></div>

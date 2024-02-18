@@ -3,10 +3,14 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Link from 'next/link';
+import { Inter, Noto_Serif } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
+const noto_serif = Noto_Serif({ subsets: ["latin"] });
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-black py-8" style={{ backgroundColor: 'var(--green)' }}>
+    <footer className={`bg-gray-800 text-black py-8 ${inter.className}`} style={{ backgroundColor: 'var(--green)' }}>
       <div className="container mx-auto flex flex-col items-center">
         <div className="flex mb-4">
           <Link legacyBehavior href="/">
