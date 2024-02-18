@@ -2,6 +2,8 @@
 
 In the past few years, there has been a very prevalent mental health crisis in our communities. With anxiety and depression rates in college student rising at an alarming rate, it is becoming more and more important to have mental health outlets and resources readily available. We took it upon ourselves to develop a web application that serves as a pipeline to connect college students to their college's counseling and psychological services. Without seeking support, the odds are stacked against you. End the stigma surrounding mental health. *Beat the odds.*
 
+Link: https://studentsupportnet.vercel.app/
+
 ## Table of Contents
 
 - [About](#about)
