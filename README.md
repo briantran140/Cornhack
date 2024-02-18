@@ -6,21 +6,53 @@ In the past few years, there has been a very prevalent mental health crisis in o
 
 - [About](#about)
 - [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
 - [API](#api)
 - [Contributing](#contributing)
 - [License](#license)
 
+---
+
 ## About
 
-Provide a brief overview of the project, its purpose, and any key objectives.
+In response to the escalating mental health crisis among college students, BeatTheOdds is a web application dedicated to fostering mental health awareness and providing a supportive platform for individuals to seek help. With rising rates of anxiety and depression, our mission is to end the stigma surrounding mental health and empower students to navigate their mental well-being successfully.
+
+---
 
 ## Features
 
 - **Connection to Counseling Services:** Seamlessly connect college students to their college's counseling and psychological services.
 - **Mental Health Resources:** Provide a centralized hub for mental health resources, information, and support.
 - **User-Friendly Interface:** An intuitive and user-friendly web application designed to ensure a positive user experience.
+
+---
+
+## Technologies Used
+
+BeatTheOdds is built using a combination of modern technologies to provide a seamless and engaging experience for users.
+
+### Frameworks and Libraries
+
+- **Next.js:** BeatTheOdds is built on Next.js, a powerful React framework that enables server-side rendering, efficient routing, and simplified development.
+
+- **Framer Motion:** We utilize Framer Motion for smooth and interactive animations, creating an engaging user interface.
+
+- **React-google-charts:** To visualize data effectively, we employ the React wrapper for Google Charts, enabling dynamic and responsive chart displays.
+
+### Data Integration
+
+- **Axios:** The application uses Axios for making HTTP requests, facilitating the integration of external data sources, such as the U.S. Department of Health and Human Services API.
+
+### Deployment
+
+- **Vercel:** BeatTheOdds is deployed and hosted on Vercel, providing a reliable and scalable platform that ensures optimal performance.
+
+### Development and Collaboration
+
+- **Git & GitHub:** Version control and collaboration are managed using Git, with the project repository hosted on GitHub.
+
+---
 
 ## Getting Started
 
@@ -93,6 +125,8 @@ We welcome contributions from the community. If you'd like to contribute to the 
 - Create a new branch for your feature or bug fix.
 - Make your changes and submit a pull request.
 - For bug reports, feature requests, or general questions, please open an issue.
+
+---
 
 ## License
 
